@@ -1,0 +1,352 @@
+/* Simple, clean, responsive card layout with dark/light mode */
+:root {
+  --bg: #f7f8fa;
+  --text: #1a1a1a;
+  --card-bg: #fff;
+  --card-border: #e3e7ed;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --shadow: 0 4px 24px 0 rgba(60,72,88,0.08);
+}
+[data-theme="dark"] {
+  --bg: #000;
+  --text: #f5f5f5;
+  --card-bg: #23272a;
+  --card-border: #333;
+  --accent: #60a5fa;
+  --accent-hover: #3b82f6;
+  --shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  transition: background 0.2s, color 0.2s;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.top-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.toggle-btn, .github-btn {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: var(--shadow);
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+}
+.toggle-btn:hover, .github-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent-hover);
+  box-shadow: 0 2px 12px 0 rgba(60,72,88,0.10);
+}
+.toggle-btn {
+  font-size: 1.35rem;
+}
+.github-btn svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.2rem;
+  max-width: 1000px;
+  margin: 2.5rem auto 0 auto;
+  padding: 0 1.5rem 3rem 1.5rem;
+}
+.card, .card-link {
+  /* Set the largest shadow size as default, but transparent */
+  box-shadow: 0 8px 32px 0 rgba(60,72,88,0.00), 0 2px 8px 0 rgba(60,72,88,0.00);
+  border: 1.5px solid var(--card-border);
+  border-radius: 18px;
+  padding: 2.2rem 1.7rem 1.5rem 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  transition: box-shadow 0.22s cubic-bezier(.4,0,.2,1), border 0.18s, background 0.18s, color 0.18s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover, .card-link:hover {
+  /* Only change shadow color/opacity, not size */
+  box-shadow: 0 8px 32px 0 rgba(59,130,246,0.18), 0 2px 8px 0 rgba(60,72,88,0.10);
+  border-color: var(--accent);
+  background: linear-gradient(120deg, var(--card-bg) 80%, var(--accent) 120%);
+  /* Remove transform to prevent layout shift */
+  transform: none;
+}
+.card-link:active {
+  /* Keep active state subtle, no scale */
+  background: linear-gradient(120deg, var(--card-bg) 60%, var(--accent) 140%);
+  box-shadow: 0 8px 32px 0 rgba(59,130,246,0.18), 0 2px 8px 0 rgba(60,72,88,0.10);
+  transform: none;
+}
+.card-title {
+  color: var(--accent);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 0.2rem;
+  transition: color 0.2s;
+}
+.card-title:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+.card-summary {
+  color: var(--text);
+  font-size: 1.08rem;
+  opacity: 0.92;
+  line-height: 1.6;
+}
+.card-author {
+  font-size: 0.98rem;
+  color: var(--accent);
+  opacity: 0.85;
+  margin-top: 0.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 18px;
+  padding: 2.2rem 1.7rem 1.5rem 1.7rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, border 0.2s, transform 0.18s, background 0.18s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card-link:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px 0 rgba(59,130,246,0.18), 0 2px 8px 0 rgba(60,72,88,0.10);
+  background: linear-gradient(120deg, var(--card-bg) 80%, var(--accent) 120%);
+  text-decoration: none;
+}
+.card-link .card-title {
+  color: var(--accent);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  transition: color 0.2s;
+}
+.card-link:hover .card-title {
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+.card.project-detail-card {
+  border: none;
+  box-shadow: none;
+  background: var(--card-bg);
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card.project-detail-card:hover {
+  border: none;
+  box-shadow: none;
+  background: var(--card-bg);
+}
+.card.project-detail-card p {
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
+  line-height: 1.45;
+}
+.card.project-detail-card ul,
+.card.project-detail-card ol {
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
+}
+.card.project-detail-card h2,
+.card.project-detail-card h3,
+.card.project-detail-card h4 {
+  margin-top: 0.8em;
+  margin-bottom: 0.3em;
+}
+
+/* Even tighter spacing for markdown content in project detail cards */
+.card.project-detail-card p,
+.card.project-detail-card ul,
+.card.project-detail-card ol {
+  margin-top: 0.08em;
+  margin-bottom: 0.08em;
+}
+.card.project-detail-card h1,
+.card.project-detail-card h2,
+.card.project-detail-card h3,
+.card.project-detail-card h4 {
+  margin-top: 0.28em;
+  margin-bottom: 0.08em;
+}
+
+/* Improve markdown table appearance in project detail pages */
+.card.project-detail-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  font-size: 1.01rem;
+}
+.card.project-detail-card th,
+.card.project-detail-card td {
+  border: 1px solid #d1d5db;
+  padding: 0.5em 0.8em;
+  text-align: left;
+}
+.card.project-detail-card th {
+  background: #f3f4f6;
+  color: #222;
+  font-weight: 600;
+}
+[data-theme="dark"] .card.project-detail-card th {
+  background: #23272a;
+  color: #e5e7eb;
+}
+.card.project-detail-card tr:nth-child(even) td {
+  background: #f8fafc;
+}
+[data-theme="dark"] .card.project-detail-card tr:nth-child(even) td {
+  background: #181a1b;
+}
+
+/* Improve link color in markdown for dark mode */
+.card.project-detail-card a {
+  color: var(--accent-hover, #60a5fa);
+  text-decoration: underline;
+  transition: color 0.18s;
+}
+[data-theme="dark"] .card.project-detail-card a {
+  color: #8ecaff;
+}
+.card.project-detail-card a:hover {
+  color: var(--accent, #3b82f6);
+}
+[data-theme="dark"] .card.project-detail-card a:hover {
+  color: #b5e3ff;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .top-buttons {
+    gap: 0.7rem;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.2rem 1.5rem 0.2rem;
+  }
+  .card, .card-link {
+    padding: 1rem 0.6rem 0.8rem 0.6rem;
+    border-radius: 14px;
+    font-size: 1rem;
+    min-width: 0;
+  }
+  .project-detail-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    border-radius: 14px;
+    font-size: 1rem;
+    min-width: 0;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+  .card-summary {
+    font-size: 0.98rem;
+  }
+  .card-author {
+    font-size: 0.93rem;
+  }
+  .project-detail-card h1 {
+    font-size: 1.3rem;
+  }
+  .card-link {
+    min-width: 0;
+    touch-action: manipulation;
+  }
+  #back-to-top-btn {
+    right: 1rem;
+    bottom: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Touch-friendly tap targets and spacing */
+.card-link, .toggle-btn, .github-btn {
+  min-height: 48px;
+  min-width: 48px;
+  touch-action: manipulation;
+}
+.card-link:active {
+  background: linear-gradient(120deg, var(--card-bg) 60%, var(--accent) 140%);
+  box-shadow: 0 8px 32px 0 rgba(59,130,246,0.18), 0 2px 8px 0 rgba(60,72,88,0.10);
+  transform: none;
+}
+#back-to-top-btn {
+  position: fixed;
+  right: 2.2rem;
+  bottom: 2.2rem;
+  z-index: 100;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  box-shadow: 0 4px 24px 0 rgba(59,130,246,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s, background 0.2s, box-shadow 0.2s;
+}
+#back-to-top-btn:hover {
+  opacity: 1;
+  background: var(--accent-hover);
+  box-shadow: 0 8px 32px 0 rgba(59,130,246,0.28);
+}
