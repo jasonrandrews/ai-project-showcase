@@ -2,6 +2,8 @@
 
 This is a project showcase website built with Astro. Each card on the home page represents a project that was created or improved using AI developer tools (such as GitHub Copilot, Amazon Q, or similar). Clicking a card opens a detailed page about that project, including the challenge, solution, results, and links to more information.
 
+https://ai-project-showcase.netlify.app/
+
 ## 🚀 Running Locally
 
 To run the project locally:
