@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: ""Accelerate Bitmap Scanning in Database Systems with SVE2"
-summary: "n SVE2 implementation that dramatically improves bitmap scanning performance for database operations on Arm servers"
+title: "Accelerate Bitmap Scanning in Database Systems with SVE2"
+summary: "An SVE2 implementation that dramatically improves bitmap scanning performance for database operations on Arm servers"
 author: "Pareena Verma"
 ---
 
