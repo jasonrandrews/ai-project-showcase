@@ -35,7 +35,7 @@ Leverage an AI-assisted Agent like Amazon Q to automate the heavy lifting that m
 
 The agent automated code generation, test-case creation, compiler-flag exploration, and results aggregation, so human time was spent only on strategic nudges rather than line-by-line instruction wrangling.
 
-This optimisation went from “probably not worth attempting without deep SVE2 instrinsic expertise” to “quick win”—unlocking a verified 90× search-loop speed-up on Arm Neoverse servers the same day I researched the SAP problem.
+This optimisation went from "probably not worth attempting without deep SVE2 instrinsic expertise" to a "quick win", unlocking a verified 90× search-loop speed-up on Arm Neoverse servers.
 
 Performance was recorded on a Graviton4 instance with Ubuntu 24.04 and a dataset of 65,536 elements (2^16), with different hit probabilities:
 
