@@ -74,5 +74,5 @@ Performance was recorded on a Graviton4 instance with Ubuntu 24.04 and a dataset
 | 0.01%    | 21.00x     | 27.08x              |
 | 0.1%     | 17.25x     | 20.97x              |
 
-Full learning path is available at https://internal.learn.arm.com/learning-paths/servers-and-cloud-computing/sve2-match/
+Full learning path is available at https://learn.arm.com/learning-paths/servers-and-cloud-computing/sve2-match/
 
