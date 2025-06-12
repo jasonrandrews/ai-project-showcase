@@ -21,7 +21,12 @@ const projects = projectEntries.map(entry => ({
   </head>
   <body>
     <div class="header">
-      <a href="/" class="title" style="text-decoration:none;">AI Project Showcase</a>
+      <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+        <a href="/" class="title" style="text-decoration:none;">AI Project Showcase</a>
+        <div class="subtitle" style="font-size:1.18rem;font-weight:500;opacity:0.75;line-height:1.2;">
+          {projects.length} project{projects.length !== 1 ? 's' : ''} available
+        </div>
+      </div>
       <div class="top-buttons">
         <button class="toggle-btn" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
         <a class="github-btn" href="https://github.com/jasonrandrews/ai-project-showcase" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -36,7 +41,7 @@ const projects = projectEntries.map(entry => ({
         <a href={project.url} class="card card-link" key={project.slug} style="text-decoration:none;">
           <div class="card-title">{project.title}</div>
           <div class="card-summary">{project.summary}</div>
-          {project.author && <div class="card-author">By {project.author}</div>}
+          {project.author && <div class="card-author">{project.author}</div>}
         </a>
       ))}
     </div>
