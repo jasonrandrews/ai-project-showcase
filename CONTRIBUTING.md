@@ -9,6 +9,7 @@
 title: "Your Project Title"
 summary: "A short summary of your project."
 link: "https://link-to-your-project.com"
+author: "John Doe"
 ---
 ```
 
