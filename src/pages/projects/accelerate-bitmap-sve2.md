@@ -31,6 +31,11 @@ Leverage AI agents like Amazon Q and shell-gpt to generate SVE2-optimized code f
 4. **Benchmark across different bit densities**
    *Use AI agent to generate the test harness and test performance across multiple bit densities (0% to 10%) to understand the optimal implementation for different scenarios.*
 
+## AI developer tools used
+
+- Amazon Q
+- Shell GPT
+
 ## Results
 
 The implementation demonstrates significant performance improvements for bitmap scanning operations across different bit densities, w

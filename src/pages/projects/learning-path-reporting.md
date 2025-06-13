@@ -17,6 +17,11 @@ The [roadmap](https://github.com/ArmDeveloperEcosystem/roadmap) GitHub repositor
 
 AI developer tools were used to create required scripts and GitHub Actions workflows to generate the required data, summarize content, and measure the throughput of the Learning Path team. 
 
+## AI developer tools used
+
+- Amazon Q CLI
+- GitHub Copilot
+
 ## Results
 
 Writing code to mine the Learning Path repository is useful, but was not a priority because it always falls in the nice-to-have category. With AI tools, the task to create Python and bash scripts drops from days to hours or minutes and suddenly it's worth the effort. The project has about 1000 lines of code, all generated.

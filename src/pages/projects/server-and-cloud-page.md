@@ -15,6 +15,11 @@ One way to get a better view is to create a single page which displays the key i
 
 AI developer tools such as [v0.dev](https://v0.dev) are a great way to solve the problem. Using v0.dev the data is scraped from learn.arm.com. v0.dev created a website with a card for each Learning Path so they can all viewed at the same time. The entire project is created using prompts, no coding is required.
 
+## AI developer tools used
+
+- v0.dev
+- GitHub Copilot
+
 ## Results
 
 The v0.dev project automatically generates and hosts (using [Vercel](https://vercel.com)) a single page which is always up to date with the latest Server and Cloud Learning Paths. The page is challenging because the scraping takes time and users don't want to wait. v0.dev is able to implement complex caching and on-demand loading to delivery good performance. 

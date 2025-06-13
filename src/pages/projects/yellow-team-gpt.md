@@ -11,10 +11,13 @@ AI tools have turbo-charged developer workflows, expanding what we **can** build
 
 Developers need a lightweight, repeatable way to **bake responsible-AI thinking into everyday workflows** so they can spot downstream impacts *before* launch. All without slowing velocity.
 
-
 ## Solution
 
 The Yellow Team methodology was distilled from industry best practice (source [here](https://consilienceproject.org/development-in-progress/) and [here](https://www.humanetech.com/course)) into actionable steps for Arm software developers. YellowTeamGPT was built to help developers think through product-design consequences up front, ensuring we build the *best* thing quickly instead of building something terrible quickly.
+
+## AI developer tools used
+
+- OpenAI custom GPT
 
 ## Results
 

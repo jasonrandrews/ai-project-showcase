@@ -11,7 +11,11 @@ AI tools can create websites based on text specifications in an instant. However
 
 ## Solution
 
-The ADS docs and component specs, for React and VinellaJS applications, were converted into an AI Agent-digestible format -- structured html docs with clear explinations and examples. This enables Agents to auto-wire ADS components and leverage the standardized Arm grid and color pallete. 
+The ADS docs and component specs, for React and Vanilla JS applications, were converted into an AI Agent-digestible format -- structured html docs with clear explanations and examples. This enables Agents to auto-wire ADS components and leverage the standardized Arm grid and color palette. 
+
+## AI developer tools used
+
+- GitHub Copilot
 
 ## Results
 

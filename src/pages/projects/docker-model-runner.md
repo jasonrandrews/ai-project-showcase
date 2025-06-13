@@ -13,6 +13,10 @@ Demonstrating new features for developers often requires example applications. I
 
 AI developer tools are a great way to automatically generate web apps to demonstrate a new feature or tool. To demonstrate how to use the new Docker Model Runner feature to run local LLMs from Docker Hub, Amazon Q CLI can automatically create a web app. Using AI developer tools makes the Learning Path more valuable as it demonstrates now only how to run AI models locally using Docker Model Runner, but also how to use models in a Docker Compose project with a web app and package it all in a container with the code and the LLM.
 
+## AI developer tools used
+
+- Amazon Q CLI
+
 ## Results
 
 With AI developer tools, the complete Docker Compose project and the Learning Path explaining it can be created in a single day. It also requires very little knowledge of how to create demo apps using frameworks like Python Flask. This is a significant time savings. Without AI developer tools, the development time for the Learning Path would be significantly longer or the web app would be dropped and the Learning Path simplified and it would become less useful. 

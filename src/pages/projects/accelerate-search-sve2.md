@@ -8,7 +8,7 @@ author: "Pareena Verma"
 ## Challenge
 
 Query-intensive databases (think SAP HANA-style reported scans, JSON parsers, or even a plain old memchr) spend a surprising amount of time doing nothing more than “find the first byte/half-word that equals X.”
-When cloud developers run these workloads on Arm based servers they notice hot spots and low performance becuase those tight inner loops are still written as scalar C implementations and even the best compilers can’t safely vectorise them because the loop breaks as soon as a match is found. 
+When cloud developers run these workloads on Arm based servers they notice hot spots and low performance because those tight inner loops are still written as scalar C implementations and even the best compilers can’t safely vectorize them because the loop breaks as soon as a match is found. 
 
 Updating every affected open-source library/database upstream would take months, and hand-rolling a NEON or SVE2 version is niche, error-prone work that most application developers don’t have time for. 
 
@@ -16,11 +16,11 @@ Updating every affected open-source library/database upstream would take months,
 
 Leverage an AI-assisted Agent like Amazon Q to automate the heavy lifting that makes hand-written SIMD code so painful:
 
-1. **Generate an SVE2-optimised implementation**
+1. **Generate an SVE2-optimized implementation**
    *Use the agent to draft and iteratively refine a `MATCH`-based search routine, side-by-side with the scalar C reference.*
 
 2. **Produce a self-contained benchmark harness**
-   *The agent scaffolds a test program that builds both variants, adds benchmakring harness and prints speedups.*
+   *The agent scaffolds a test program that builds both variants, adds benchmarking harness and prints speedups.*
 
 3. **Create exhaustive test cases**
    *Random, worst-case, and real-world data patterns ensure functional correctness across byte and half-word modes for different hit rates, iterations and haystack lengths*
@@ -30,6 +30,10 @@ Leverage an AI-assisted Agent like Amazon Q to automate the heavy lifting that m
 
 > Tried a mix of AI coding tools. Current AI coding tools still stumble on intricate SVE2 idioms; getting a *correct and faster* MATCH loop took many trial–error cycles and manual guidance. Improving AI’s grasp of advanced SIMD patterns remains an open area for tool builders.
 
+## AI developer tools used
+
+- Amazon Q
+- Shell GPT
 
 ## Results
 

@@ -23,7 +23,7 @@ import '../styles/global.css';
     <main style="display:flex;justify-content:center;padding:1.2rem 0 2.2rem 0;">
       <div class="card project-detail-card" style="max-width:900px;width:100%;padding-top:1.2rem;margin-left:auto;margin-right:auto;">
         <h1 style="margin-top:0;margin-bottom:0.5rem;font-size:2rem;font-weight:800;letter-spacing:-1px;color:var(--accent);">{Astro.props.frontmatter.title}</h1>
-        {Astro.props.frontmatter.author && <div class="card-author" style="margin-bottom:1.2rem;">By {Astro.props.frontmatter.author}</div>}
+        {Astro.props.frontmatter.author && <div class="card-author" style="margin-bottom:1.2rem;">{Astro.props.frontmatter.author}</div>}
         <slot />
         <button id="back-to-top-btn" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:none;position:fixed;right:2.2rem;bottom:2.2rem;z-index:100;">
           ↑

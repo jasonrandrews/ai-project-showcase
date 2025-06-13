@@ -18,6 +18,10 @@ Many codebases are large and have been written over many years, making the updat
 
 OpenAI has published an AI coding agent named [Codex CLI](https://github.com/openai/codex), an open-source local coding agent.
 
+## AI developer tools used
+
+- OpenAI Codex
+
 ## Results
 
 I applied Codex CLI to a codebase of about 35k lines of C++.
@@ -29,4 +33,4 @@ This experience was far from perfect — I would claim the coding agent worked a
 - Duplicated comments.
 - ...
 
-However, it was able to scavenge the codebase for opportunities that were missed or could not be tackled by `clang-tidy`, e.g. migrating to `string_view`. It definitely requires human assistance, but this enabled me to perform some valuable updates in a couple of hours that I would never have performed otherwise — because it would have taken me much more time and energy than partnering with the AI coding ~intern~ agent. 
+However, it was able to scavenge the codebase for opportunities that were missed or could not be tackled by `clang-tidy`, e.g. migrating to `string_view`. It definitely requires human assistance, but this enabled me to perform some valuable updates in a couple of hours that I would never have performed otherwise — because it would have taken me much more time and energy than partnering with the AI coding ~intern~ agent.

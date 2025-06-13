@@ -24,6 +24,10 @@ AI development tools like GitHub Copilot can work in agent mode to create:
 
 AI development tools are not great at complex NEON coding. Reaching a working solution took numerous attempts to achieve correct function and incased performance. More work is needed in AI tools to improve coding at this level.
 
+## AI developer tools used
+
+- GitHub Copilot
+
 ## Results
 
 Using AI development tools allows this challenge to be solved in hours instead days. It's a probably that would not be attempted without AI tools because the required skills, the time it takes, and uncertainty of results would likely mean to skip the problem.

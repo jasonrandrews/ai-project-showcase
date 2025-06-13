@@ -24,10 +24,14 @@ The general steps are:
 
 This process results in a working initial port of PerfSpect.
 
+## AI developer tools used
+
+- Amazon Q CLI
+
 ## Results
 
 The initial port to get a working `perfspect` binary is completed in a [fork on GitHub](https://github.com/jasonrandrews/PerfSpect). 
 
 You can view the changes in the [initial commit](https://github.com/intel/PerfSpect/compare/main...jasonrandrews:PerfSpect:main). 
 
-Using AI developer tools for software porting to Arm accelerates the porting time by quickly identifying issues and providing new ideas of how to overcome issues. 
+Using AI developer tools for software porting to Arm accelerates the porting time by quickly identifying issues and providing new ideas of how to overcome issues.

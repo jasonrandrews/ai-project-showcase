@@ -17,6 +17,10 @@ Last but not least, we need to fix the style without altering the technical inte
 
 Use an OpenAI API-based agent, either through [ShellGPT](https://github.com/TheR1D/shell_gpt) or with a Python script directly using the API, to review a learning path's pages and propose fixes to the human writer/reviewer.
 
+## AI developer tools used
+
+- Shell GPT
+
 ## Results
 
 Not only has this helped me fix stylistic issues in my own learning paths, but it has also allowed me to recognize and learn from them, saving time on our review/publish schedule to meet the expected roadmap deadline. The agent can be used by both writers and reviewers.
