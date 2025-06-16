@@ -176,6 +176,7 @@ body {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+  font-size: 1.18rem;
 }
 .card.project-detail-card:hover {
   border: none;
@@ -186,17 +187,28 @@ body {
   margin-top: 0.35em;
   margin-bottom: 0.35em;
   line-height: 1.45;
+  font-size: 1.13rem;
 }
 .card.project-detail-card ul,
 .card.project-detail-card ol {
   margin-top: 0.35em;
   margin-bottom: 0.35em;
+  font-size: 1.13rem;
 }
 .card.project-detail-card h2,
 .card.project-detail-card h3,
 .card.project-detail-card h4 {
   margin-top: 0.8em;
   margin-bottom: 0.3em;
+}
+.card.project-detail-card h1 {
+  font-size: 2.1rem;
+}
+.card.project-detail-card h2 {
+  font-size: 1.6rem;
+}
+.card.project-detail-card h3 {
+  font-size: 1.28rem;
 }
 
 /* Even tighter spacing for markdown content in project detail cards */
